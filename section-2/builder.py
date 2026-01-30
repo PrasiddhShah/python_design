@@ -18,6 +18,9 @@ class HtmlElement:
         return '\n'.join(lines)
     def __str__(self):
         return self.__str(0)
+    @staticmethod
+    def create(name):
+        return HtmlBuilder(name)
     
 class HtmlBuilder:
     def __init__(self, root_name):
